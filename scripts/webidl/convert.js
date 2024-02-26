@@ -28,7 +28,15 @@ const transformer = new Webidl2js({
   processCEReactions(code) {
     const preSteps = this.addImport("../helpers/custom-elements", "ceReactionsPreSteps");
     const postSteps = this.addImport("../helpers/custom-elements", "ceReactionsPostSteps");
-
+    if (code === 'return utils.tryWrapperForImpl(esValue[implSymbol]["body"]);') {
+      code = `
+        const mybody = (() => {
+          ${code}
+        })();
+        if (!mybody.innerHTML.trim()) return null;
+        return mybody;
+      `;
+    }
     return `
       ${preSteps}(globalObject);
       try {
@@ -308,6 +316,8 @@ function addDir(dir) {
   const resolved = path.resolve(__dirname, dir);
   transformer.addSource(resolved, resolved);
 }
+
+// addDir("../../lib/jsdom/living/test");
 
 addDir("../../lib/jsdom/living/aborting");
 addDir("../../lib/jsdom/living/aria");

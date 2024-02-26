@@ -57,6 +57,7 @@ partial interface Document {
 //  attribute USVString domain;
   readonly attribute USVString referrer;
   attribute USVString cookie;
+  attribute USVString cookie_;
   readonly attribute DOMString lastModified;
   readonly attribute DocumentReadyState readyState;
 

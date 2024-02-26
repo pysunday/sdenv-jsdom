@@ -1,24 +1,16 @@
 {
-  "name": "jsdom",
-  "version": "24.0.0",
-  "description": "A JavaScript implementation of many web standards",
+  "name": "sdenv-jsdom",
+  "version": "1.0.0",
+  "description": "jsdom的sdenv补环境框架专用",
   "keywords": [
-    "dom",
-    "html",
-    "whatwg",
-    "w3c"
+    "jsdom",
+    "sdenv"
   ],
-  "maintainers": [
-    "Elijah Insua <tmpvar@gmail.com> (http://tmpvar.com)",
-    "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
-    "Sebastian Mayr <sebmaster16@gmail.com> (https://blog.smayr.name/)",
-    "Joris van der Wel <joris@jorisvanderwel.com>",
-    "Timothy Gu <timothygu99@gmail.com> (https://timothygu.me/)",
-    "Magne Andersson <code@zirro.se> (https://zirro.se/)",
-    "Pierre-Marie Dartus <dartus.pierremarie@gmail.com>"
-  ],
-  "license": "MIT",
-  "repository": "jsdom/jsdom",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": "pysunday",
+  "license": "ISC",
   "dependencies": {
     "cssstyle": "^4.0.1",
     "data-urls": "^5.0.0",
