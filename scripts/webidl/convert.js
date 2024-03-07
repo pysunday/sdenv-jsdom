@@ -33,7 +33,7 @@ const transformer = new Webidl2js({
         const mybody = (() => {
           ${code}
         })();
-        if (!mybody.innerHTML.trim()) return null;
+        if (globalObject.document.readyState === 'loading') return null
         return mybody;
       `;
     }
