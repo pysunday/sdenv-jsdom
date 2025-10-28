@@ -1,6 +1,6 @@
 {
   "name": "sdenv-jsdom",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "jsdom的sdenv补环境框架专用",
   "keywords": [
     "jsdom",
@@ -38,7 +38,7 @@
     "xml-name-validator": "^5.0.0"
   },
   "peerDependencies": {
-    "canvas": "^3.0.0"
+    "canvas": "^3.2.0"
   },
   "peerDependenciesMeta": {
     "canvas": {

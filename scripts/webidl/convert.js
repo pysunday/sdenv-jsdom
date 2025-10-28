@@ -18,7 +18,7 @@ const transformer = new Webidl2js({
         const mybody = (() => {
           ${code}
         })();
-        if (globalObject.document.readyState === 'loading') return null;
+        if (esValue === globalObject.document && esValue.renderBodyFlag) return null;
         return mybody;
       `;
     }
